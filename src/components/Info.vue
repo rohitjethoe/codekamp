@@ -114,4 +114,63 @@ export default {
             }
         }
     }
+
+    @media only screen and (min-width: 600px) and (max-width: 800px){
+        .info {
+            padding: 80px 5vw;
+            .heading {
+                h2 {
+                    padding: 10px 12px;
+                    font-size: 36px;
+                    margin: 20px 0px;
+                }
+            }
+            .content {
+                font-size: 20px;
+            }
+            .app {
+                color: #282828;
+                padding: 20px 0px;
+                font-size: 20px;
+                .begin {
+                    width: 90%;
+                    margin: 0px auto;
+                    .button {
+                        margin: 10px 0px;
+                        padding: 10px 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        .info {
+            padding: 80px 10vw;
+            .heading {
+                h2 {
+                    padding: 10px 12px;
+                    font-size: 36px;
+                    margin: 20px 0px;
+                }
+            }
+            .content {
+                font-size: 20px;
+                width: 700px;
+            }
+            .app {
+                color: #282828;
+                padding: 20px 0px;
+                font-size: 20px;
+                .begin {
+                    width: 90%;
+                    margin: 0px auto;
+                    .button {
+                        margin: 10px 0px;
+                        padding: 10px 12px;
+                    }
+                }
+            }
+        }
+    }
 </style>

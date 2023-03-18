@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Info from '../components/Info.vue';
-
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Home">
 	<main>
 		<div class="landing">
 			<div class="introduction">
@@ -102,6 +101,63 @@ import Info from '../components/Info.vue';
 				}
 			}
 			.example {
+				padding: 10px 8px;
+				margin: 15px 0px;
+				border-radius: 4px;
+			}
+			.buttons {
+				margin: 15px 0px;
+				a:link, a:visited {
+					margin: 5px 0px;
+					padding: 10px 12px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 800px) {
+		.landing {
+			width: 90vw;
+			margin: 80px auto;
+			.introduction {
+				font-size: 36px;
+				margin: 15px 0px;
+				.subtext {
+					margin: 5px 0px;
+					font-size: 24px;
+				}
+			}
+			.example {
+				width: 400px;
+				padding: 10px 8px;
+				margin: 15px 0px;
+				border-radius: 4px;
+			}
+			.buttons {
+				margin: 15px 0px;
+				a:link, a:visited {
+					margin: 5px 0px;
+					padding: 10px 12px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 800px) {
+		.landing {
+			width: 80vw;
+			margin: 80px auto;
+			.introduction {
+				width: 100%;
+				font-size: 36px;
+				margin: 15px 0px;
+				.subtext {
+					margin: 5px 0px;
+					font-size: 24px;
+				}
+			}
+			.example {
+				width: 400px;
 				padding: 10px 8px;
 				margin: 15px 0px;
 				border-radius: 4px;
