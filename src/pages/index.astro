@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Info from '../components/Info.vue';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="landing">
+			<div class="introduction">
+				<div class="welcome">
+					Doe mee met de <span>IT revolutie</span> en verander <span>jouw toekomst</span> vandaag.
+				</div>
+				<div class="subtext">
+					Leer programmeren als een professional.
+				</div>
+			</div>
+			<div class="example">
+				<code></code>
+			</div>
+			<div class="buttons">
+				<a class="get-started" href="">
+					Alle gidsen bekijken
+				</a>
+			</div>
+		</div>
+		<Info client:load />
+	</main>
+</Layout>
+
+<script>
+	const codeText = "console.log('Hello, World!');";
+	const codeBlock = document.querySelector('.example code');
+	const delay = 100;
+	
+	let i = 0;
+	
+	function typeWriter() {
+		if (i < codeText.length) {
+			codeBlock.innerHTML += codeText.charAt(i);
+			i++;
+			setTimeout(typeWriter, delay);
+		}
+	}
+
+	typeWriter();
+</script>
+
+<style lang="scss">
+	.landing {
+		font-family: 'Sarabun', sans-serif;
+		.introduction {
+			.welcome {
+				span {
+					background-color: #DFE2CF;
+					font-weight: 600;
+				}
+			}
+			.subtext {
+				color: #4d4d4d;
+			}
+		}
+		.example {
+			background-color: #282828;
+			code {	
+				color: #fff;
+			}
+		}
+		.buttons {
+			.get-started {
+				background-color: #d4a373;
+			}
+			.get-started:hover {
+				background-color: #d09860;
+			}
+			.where-to-start {
+				background-color: #ccd5ae;
+			}
+			.where-to-start:hover {
+				background-color: #c4d19b;
+			}
+			a:link, a:visited {
+				color: #fff;
+				display: inline-block;
+				font-weight: 600;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: 0.5s all;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.landing {
+			width: 90vw;
+			margin: 10px auto;
+			.introduction {
+				font-size: 20px;
+				margin: 15px 0px;
+				.subtext {
+					margin: 5px 0px;
+					font-size: 18px;
+				}
+			}
+			.example {
+				padding: 10px 8px;
+				margin: 15px 0px;
+				border-radius: 4px;
+			}
+			.buttons {
+				margin: 15px 0px;
+				a:link, a:visited {
+					margin: 5px 0px;
+					padding: 10px 12px;
+				}
+			}
+		}
+	}
+</style>
