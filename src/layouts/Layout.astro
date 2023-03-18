@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 
 export interface Props {
 	title: string;
@@ -20,10 +21,13 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous"/>
 	</head>
 	<body>
 		<Header client:load />
 		<slot />
+		<Footer client:load />
 	</body>
 </html>
 <style lang="scss" is:global>
@@ -36,12 +40,13 @@ const { title } = Astro.props;
 		background-color: #f9fafb;	
 	}
 
+	body {
+		overflow-x: hidden;
+		font-family: 'Sarabun', sans-serif;
+	}
+
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-
-	body {
-		overflow-x: hidden;
 	}
 </style>

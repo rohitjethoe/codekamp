@@ -6,9 +6,9 @@
             </h2>
         </div>
         <div class="content">
-            <p>Programmeren is een breed begrip. Vandaag wordt computercode schrijven toegepast op elk aspect in onze maatschappij.</p> 
+            <p><span>Programmeren</span> is een breed begrip. Vandaag wordt computercode schrijven toegepast op elk aspect in onze maatschappij.</p> 
             <br />
-            <p>Denk aan <span>website</span>, <span>desktop</span> en <span>mobiele</span> apps. <span>Database</span>  development. Maar ook <span>DevOps</span>, <span>Security</span> en <span>AI</span> engineering.</p>
+            <p>Denk aan website, desktop en mobile development. Maar ook Database, DevOps en Security Engineering. Daarnaast heb je nog Backend applicaties die worden gemaakt met AI, Automatisering en nog veel meer.</p> 
             <br>
             <p>Zoveel keus, maar <span>waar moet jij beginnen?</span></p>
             <br>
@@ -70,7 +70,7 @@ export default {
             }
         }
         .app {
-            background-color: #ccd5ae;
+            background-color: #b7c296;
             .begin {
                 .question {
                     font-weight: 600;
@@ -80,6 +80,11 @@ export default {
                     display: inline-block;
                     text-transform: uppercase;
                     font-weight: 600;
+                    user-select: none;
+                    -webkit-user-select: none;
+                }
+                .button:hover {
+                    cursor: pointer;
                 }
             }
         }
@@ -87,7 +92,7 @@ export default {
 
     @media only screen and (max-width: 600px) {
         .info {
-            padding: 15px 5vw;
+            padding: 80px 5vw;
             .heading {
                 h2 {
                     padding: 10px 12px;
