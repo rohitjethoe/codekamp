@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import Intro from "../../content/html/intro.md";
+import Editor from "../../content/html/editor.md";
+
+const posts = await Astro.glob('../../content/html/*.md');
+
+---
+
+<Layout title="HTML Introductie">
+    <div>
+        <div class="content">
+            <Intro />
+        </div>
+        <div class="content">
+            <Editor />
+        </div>
+        <div class="coming-soon">
+            Binnenkort meer...
+        </div>
+    </div>
+</Layout>
+
+<style lang="scss" scoped>
+    .coming-soon {
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        div {
+            width: 90vw;
+            margin: 20px auto;
+        }
+
+        .content {
+            margin: 30px 0px;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+        div {
+            width: 86vw;
+            margin: 30px auto;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        div {
+            width: 740px;
+            margin: 20px auto;
+        }
+    }
+</style>

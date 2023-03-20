@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Scanner from './apps/Scanner.vue';
+import Scanner from './embeddings/Scanner.vue';
 
 export default {
     name: 'InfoComponent',
@@ -160,6 +160,7 @@ export default {
             }
             .app {
                 color: #282828;
+                width: 700px;
                 padding: 20px 0px;
                 font-size: 20px;
                 .begin {

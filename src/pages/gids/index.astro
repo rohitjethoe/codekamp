@@ -1,0 +1,155 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Gidsen">
+    <main>
+        <div class="heading">
+            <h1>Alle gidsen</h1>
+            <p>Leer met handleidingen code schrijven.</p>
+        </div>
+        <div class="guides">
+            <ul>
+                <li>
+                    <a href="/gids/html">HTML</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">JavaScript</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">CSS</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">Wordpress</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">Java</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">C#</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">PHP</a>
+                </li>
+                <li>
+                    <a class="unavailable" href="#">Node.js</a>
+                </li>
+            </ul>
+            <div class="legenda">
+                <div class="legenda-item">
+                    <div class="legenda-square available"></div> 
+                    Beschikbaar
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-square unavailable"></div> 
+                    Momenteel niet beschikbaar
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style lang="scss" scoped>
+    .heading {
+        h1 {
+            font-weight: 500;
+        }
+    }
+    .guides {
+        ul {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            li {
+                list-style-type: none;
+                display: block;
+                a:link, a:visited {
+                    color: #fff;
+                    display: inline-block;
+                    background-color: #282828;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+                .unavailable:link, .unavailable:visited {
+                    background-color: #555353;
+                }
+            }
+        }
+        .legenda {
+            .legenda-item {
+                display: flex;
+                align-items: center;
+                .legenda-square {
+                    background-color: #555353;
+                    width: 20px;
+                    height: 20px;
+                }
+                .available {
+                    background-color: #282828;
+                }
+                .unavailable {
+                    background-color: #555353;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        main {
+            width: 90vw;
+            margin: 20px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+        main {
+            width: 86vw;
+            margin: 20px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        main {
+            width: 480px;
+            margin: 30px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+</style>
