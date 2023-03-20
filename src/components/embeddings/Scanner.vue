@@ -196,4 +196,12 @@ export default {
             padding: 0px 20px;
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        .scanner {
+            .question {
+                font-size: 12px;
+            }
+        }
+    }
 </style>

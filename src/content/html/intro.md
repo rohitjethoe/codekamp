@@ -29,7 +29,7 @@ HTML is de markup taal die in de browser wordt gebruikt om webpagina's te creeë
         <div class="circle circle-2"></div>
     </div> 
     <div class="result">
-        <h1>Mijn eerste titels</h1>
+        <h1>Mijn eerste heading</h1>
         <p>Mijn eerste paragraaf</p>
     </div>
 </div>
