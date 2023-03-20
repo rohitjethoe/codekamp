@@ -1,0 +1,153 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Gidsen">
+    <main>
+        <div class="heading">
+            <h1>Alle projecten</h1>
+            <p>Leer door middel van een project te bouwen.</p>
+        </div>
+        <div class="guides">
+            <ul>
+                <li>
+                    <a class="html-css-js" href="/gids/html">Takenlijst Webapp</a>
+                </li>
+                <li>
+                    <a class="html-css" href="/gids/html">Restaurant Website </a>
+                </li>
+                <li>
+                    <a class="html-css" href="/gids/html">Bijenkorf namaken</a>
+                </li>
+                <li>
+                    <a class="html-css" href="/gids/html">Portfolio</a>
+                </li>
+                <li>
+                    <a class="html-css-js" href="/gids/html">Live Klok Webapp</a>
+                </li>
+            </ul>
+            <div class="legenda">
+                <div class="legenda-item">
+                    <div class="legenda-square html-css-js"></div> 
+                    HTML, CSS en JavaScript
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-square html-css"></div> 
+                    HTML en CSS
+                </div>
+                <div class="legenda-item">
+                    <div class="legenda-square unavailable"></div> 
+                    Momenteel niet beschikbaar
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style lang="scss" scoped>
+    .heading {
+        h1 {
+            font-weight: 500;
+        }
+    }
+    .guides {
+        ul {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            li {
+                list-style-type: none;
+                display: block;
+                a:link, a:visited {
+                    color: #fff;
+                    display: inline-block;
+                    background-color: #282828;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                }
+                .html-css-js:link, .html-css-js:visited {
+                    background-color: #d4a373;
+                }
+                .html-css:link, .html-css:visited {
+                    background-color: #c87d33;
+                }
+            }
+        }
+        .legenda {
+            .legenda-item {
+                display: flex;
+                align-items: center;
+                .legenda-square {
+                    background-color: #555353;
+                    width: 20px;
+                    height: 20px;
+                }
+                .html-css-js {
+                    background-color: #d4a373;
+                }
+                .html-css {
+                    background-color: #c87d33;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        main {
+            width: 90vw;
+            margin: 20px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+        main {
+            width: 86vw;
+            margin: 20px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        main {
+            width: 480px;
+            margin: 30px auto;
+            .heading {
+                margin: 10px 0px;
+            }
+            .guides {
+                margin: 10px 0px;
+                .legenda {
+                    margin: 10px 0px;
+                    .legenda-item {
+                        margin: 4px 0px;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+</style>

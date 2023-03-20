@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-content github">
-        Vind je een probleem op de pagina? Fix het op onze open-source <a target="_blank" href="">GitHub Repository.</a>
+        Vind je een probleem op de pagina? Fix het op onze open-source <a target="_blank" href="https://github.com/rohitjethoe/codekamp">GitHub Repository.</a>
     </div>
     <div class="footer-content socials">
         <a target="_blank" href="">
@@ -10,7 +10,7 @@
         <a target="_blank" href="">
             <i class="fa-brands fa-tiktok"></i>
         </a>
-        <a target="_blank" href="">
+        <a target="_blank" href="https://github.com/rohitjethoe/codekamp">
             <i class="fa-brands fa-github"></i>
         </a>
         <a target="_blank" href="">
