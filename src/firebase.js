@@ -1,5 +1,1 @@
-import firebase from 'firebase';
-
-const firebaseConfig = {
-    
-}
+// maybe implement later for user login. (Google User Auth)
