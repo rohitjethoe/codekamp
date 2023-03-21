@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Leren">
+    <main>
+        <div class="heading">
+            <h1>Leren</h1>
+            <p>Leren programmeren, doe je met <span>codekamp</span>.</p>
+        </div>
+        <div class="content">
+            <div class="about">
+                <h2>
+                    Hoe kan ik leren programmeren?
+                </h2>
+                <p>
+                    Wij bieden gratis content aan waar jij mee kan leren programmeren als een professional.
+                </p>
+            </div>
+            <div class="courses"> 
+                <div class="facts hard-truth">       
+                    <h3>Harde waarheid</h3>
+                    <p>
+                        Je kan <span>niet</span> leren door video's alleen te bekijken.
+                    </p>
+                </div>
+                <div class="facts solution">    
+                    <h3>Oplossing</h3>
+                    <p>
+                        Waar codekamp om draait is actief <span>projecten bouwen</span> aan de hand van video's of blogartikelen.
+                    </p>
+                </div>
+                <div class="facts help">    
+                    <h3>Veel plezier</h3>
+                    <p> 
+                        Pas op, coderen is verslavend, haha.
+                    </p>
+                </div>
+            </div>
+            <div class="projects">
+                <h2>Cursussen</h2>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style lang="scss" scoped>
+    main {
+        color: #282828;
+        .heading {
+            h1 {
+                font-weight: 500;
+            }
+            p {
+                color: #515151;
+            }
+        }
+        .content {
+            .about {
+                h2 {
+                    font-weight: 500;
+                }
+                p {
+                    color: #515151;
+                }
+            }
+            .courses {
+                h3 {
+                    background-color: #ccd5ae;
+                    display: inline-block;
+                    padding: 3px 6px;
+                }
+                p {
+                    color: #515151;
+                }
+                .hard-truth {
+                    h3 { 
+                        background-color: #f97d74;
+                    }
+                    span {
+                        color: #f97d74;
+                        font-weight: 600;
+                    }
+                }
+                .solution {
+                    h3 { 
+                        background-color: #7EA0B7;
+                     }
+                    span { 
+                        color: #7EA0B7; 
+                        font-weight: 600;
+                    }
+                }
+            }
+            .projects {
+                h2 {
+                    font-weight: 500;
+                    display: inline-block;
+                    padding: 2px 8px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        main {
+            .heading {
+                margin: 20px auto;
+                width: 90vw;
+            }
+            .content {
+                .about {
+                    margin: 30px auto;
+                    width: 90vw;
+                }
+                .courses {
+                    margin: 40px auto;
+                    margin-bottom: 60px;
+                    width: 90vw;
+                    .facts {
+                        margin: 10px 0;
+                        p {
+                            margin: 5px 0px;
+                        }
+                    }
+                }
+                .projects {
+                    padding: 20px 5vw;
+                    background-color: #282828;
+                    h2 {    
+                    }
+                }
+            }
+        }
+    }
+</style>
