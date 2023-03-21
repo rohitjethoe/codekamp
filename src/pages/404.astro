@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Oeps...">
+    <main>
+        <div class="return">
+            <div class="error">
+                <h1>404</h1>
+                <p>Oeps... de pagina die je probeert te bezoeken bestaat niet</p>
+                <div class="return-button">
+                    <a href="/">
+                        Terug naar thuispagina
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style lang="scss" scoped>
+    .return {
+        color: #282828;
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 12vh 0;
+        .error {
+            h1 {
+                font-weight: 500;
+                font-size: 64px;
+            }
+            .return-button {
+                display: inline-block;
+                margin: 20px 0px;
+                a:link, a:visited {
+                    background-color: #d4a373;
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    transition: 0.5s;
+                    padding: 10px;
+                }
+                a:hover {
+                    background-color: #d3985c;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        .return {
+            .error {
+                h1 {
+                    font-size: 84px;
+                }
+                p {
+                    font-size: 20px;
+                    margin: 10px 0px;
+                }
+                .return-button {
+                    a:link, a:visited {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+</style>
